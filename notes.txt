@@ -1,0 +1,3 @@
+lister-list div container
+	tr -> td titlecolumn -> <a>title</a>
+	tr ratingcolumn -> strong rating
