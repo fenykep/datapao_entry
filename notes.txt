@@ -7,3 +7,7 @@ id/rating
 	<section cel_widget_id="StaticFeature_Awards" class="ipc-page-section ipc-page-section--base celwidget" data-csa-c-id="vssll3-wtu33v-fc59ju-4utaow" data-cel-widget="StaticFeature_Awards">
 	wrapper for awards-present at all top movies
 
+ir:imdb rank data-value="$RANK"
+nv:rates no. data-value="$RATES"
+a href=/title/$ID/"
+img [...] alt="$TITLE"
