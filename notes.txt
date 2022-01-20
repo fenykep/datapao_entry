@@ -1,3 +1,9 @@
+top250
 lister-list div container
 	tr -> td titlecolumn -> <a>title</a>
 	tr ratingcolumn -> strong rating
+
+id/rating
+	<section cel_widget_id="StaticFeature_Awards" class="ipc-page-section ipc-page-section--base celwidget" data-csa-c-id="vssll3-wtu33v-fc59ju-4utaow" data-cel-widget="StaticFeature_Awards">
+	wrapper for awards-present at all top movies
+

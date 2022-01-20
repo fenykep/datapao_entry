@@ -11,4 +11,4 @@ let gyerkocok = konti.children
 get title, id, rating, link of first 20
 foreach open link (id/awards, id/ratings)
 check if mainpage always has that tiny flag thing stating no oscars
-aztán cső
+yes, so just id/ratings
