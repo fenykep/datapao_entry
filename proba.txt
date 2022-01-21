@@ -1,0 +1,6 @@
+78,almafa
+83,körtefa
+17,albatrosz
+48,árvíztűrő
+91,tükörfúrógép
+66,kalamajka

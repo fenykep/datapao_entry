@@ -12,3 +12,6 @@ check if mainpage always has that tiny flag thing stating no oscars
 yes, so just id/ratings
 
 ruby, python, bash-ish at scope
+
+time python-scrapy, ruby and wget-sed-grep
+scrapy lxml based

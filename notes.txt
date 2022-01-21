@@ -11,3 +11,19 @@ ir:imdb rank data-value="$RANK"
 nv:rates no. data-value="$RATES"
 a href=/title/$ID/"
 img [...] alt="$TITLE"
+time of getting first 250 titles from one page
+
+bash time:
+|real    0m0,809s
+|user    0m0,026s
+|sys     0m0,030s
+
+python-scrapy time:
+|real    0m1,935s
+|user    0m0,951s
+|sys     0m0,077s
+
+ruby-nokogiri time:
+|real    0m1,437s
+|user    0m0,467s
+|sys     0m0,081s
