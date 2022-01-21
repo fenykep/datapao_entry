@@ -1,5 +1,5 @@
 #!/bin/bash
-Hanysor=6
+Hanysor=5
 #lehetne a sepcharnak is var, ha esetleg egy olyan film lenne a top 20-ban amiben van ;
 #echo 'Rating;RNo;ID;Title' > processed.csv
 wget -q -O- https://www.imdb.com/chart/top/ \
@@ -20,17 +20,27 @@ forlooposSzett(){
 }
 
 awkmegoldja(){
-	awk 'BEGIN { cmd = "wget -q -O - https://www.imdb.com/title/tt0111161 | grep -o \"Won [[:digit:]]* Oscars\""
-		while ( ( cmd | getline result ) > 0 ) {
-			print result
-			print "sziasztok"
+	maxos=1
+	awk -F';' -v maxika=1 '{ cmd = "wget -q -O - https://www.imdb.com/title/"$3" | grep -o \"Won [[:digit:]]* Oscar\" | cut -c 5-6"
+		cmd | getline result
+		if($2>maxika){maxika=$2}
+		if(length(result)==0) {
+			print $4";"$3";"$1";"$2";0" > "newproci.csv"
+		}
+		else{
+			print $4";"$3";"$1";"$2";"result + 10 > "newproci.csv"
 		}
 		close(cmd);
-	}'
-# awk -F';' 'NR!=1{print $0; next} {cmd =  "wget -q \"https://www.imdb.co        m/title/"$3 cmd > $4 close(cmd)}' processed.csv
+	} END { print maxika }' processed.csv
+}
+
+penalizador(){
+	echo "hallatlan"
+	echo $1
 }
 
 awkmegoldja
+
 
 # -m20 -A5 hogy husz darab cuccot irj ki, ahol van a nameIR plussz a kövi öt sort, 
 #aztán a sed csöndben(n) printeli azokat a sorokat, ahol vannak a keresett szettek

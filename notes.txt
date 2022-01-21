@@ -27,3 +27,27 @@ ruby-nokogiri time:
 |real    0m1,437s
 |user    0m0,467s
 |sys     0m0,081s
+
+
+penalcalc(max){ #max returned by awk, calc processes each line[$Rat,$RNo]
+	$Rat -= int($max-$RNo/100000)
+}
+
+oscalc{ #[$Rat, $oscNo]
+	bonus = 0
+	switch bonus
+	case([1-2]): bonus=0.3
+	case([3-5]): bonus=0.5
+	case([6-10]):bonus=1.0
+	case([10+]): bonus=1.5
+	$Rat+=bonus
+}
+
+
+so 4 functions:
+getTops(Hanysor) -> get $title;$ID;$Rat;$RNo\n return csv
+getOsc(file) -> append EOL ;$oscNo és return $max
+penalcalc(file, max)
+oscalc(file)
+
+
