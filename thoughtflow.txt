@@ -1,0 +1,17 @@
+check if imdb has one simple page with all req details (no)
+check for api - omdbapi - no imdb ratersnum
+datasets.imdbws.com - no oscar
+aws something - prolly this'd've be my job but seems scary 
+at this point its either linkhopping or combining different apis
+start with js
+let konti = document.getElementsByClassName("lister-list")[0]
+let gyerkocok = konti.children
+get title, id, rating, link of first 20
+foreach open link (id/awards, id/ratings)
+check if mainpage always has that tiny flag thing stating no oscars
+yes, so just id/ratings
+
+ruby, python, bash-ish at scope
+
+time python-scrapy, ruby and wget-sed-grep
+scrapy lxml based
